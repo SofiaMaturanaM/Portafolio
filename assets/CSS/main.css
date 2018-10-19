@@ -132,17 +132,16 @@ nav i {
 /* Home */
 
 #home {
-    background-color: #1D2731;
+    /* background-color: #1D2731; */
+    z-index: 0;
+}
+
+#home:after {
     background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/YqGSkmb/elegant-fantasy-abstract-technology-science-and-engineering-motion-background-with-golden-particles-in-organic-motion-flickering-light-depth-of-field-settings-3d-rendering_s-qpffa_g_thumbnail-full09.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: 50% 50%;
-    z-index: 0;
-}
-
-
-/* #home:after {
     content: "";
     opacity: 0.5;
     top: 0;
@@ -151,7 +150,7 @@ nav i {
     right: 0;
     position: absolute;
     z-index: -1;
-} */
+}
 
 #home svg {
     position: absolute;
