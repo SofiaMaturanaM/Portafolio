@@ -1,0 +1,381 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Muli', sans-serif;
+    background-color: #1D2731;
+    color: #1D2731;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #D9B310;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D9B310;
+}
+
+
+/* navbar */
+
+.navbar-nav {
+    font-family: 'Adamina', serif;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    line-height: 1em;
+    margin: 15px 40px;
+    text-transform: uppercase;
+}
+
+.navbar-nav li {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0.5em 0.6em;
+    padding: 12px 15px;
+    position: relative;
+}
+
+.navbar-nav li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-nav li:before,
+.navbar-nav li:after {
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+    height: 2px;
+    width: 35%;
+    background-color: #D9B310;
+    position: absolute;
+    content: '';
+    opacity: 0;
+}
+
+.navbar-nav li:before {
+    top: 0;
+    left: 0;
+}
+
+.navbar-nav li:after {
+    bottom: 0;
+    right: 0;
+}
+
+.navbar-nav li:hover:before,
+.navbar-nav li.hover:before,
+.navbar-nav li:hover:after,
+.navbar-nav li.hover:after {
+    opacity: 1;
+}
+
+.navbar-nav li:hover:before,
+.navbar-nav li.hover:before {
+    left: 65%;
+}
+
+.navbar-nav li:hover:after,
+.navbar-nav li.hover:after {
+    right: 65%;
+}
+
+nav {
+    font-family: 'Adamina', serif;
+    padding-right: 2rem;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+    font-size: 1.3rem;
+    padding: .5rem 1.5rem;
+}
+
+nav i {
+    color: #D9B310;
+    font-size: 1.5rem;
+    padding: .5rem 1.5rem;
+}
+
+.navbar-toggler {
+    padding: .25rem .75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+
+
+/* sections */
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    display: block;
+}
+
+
+/* Home */
+
+#home {
+    background-color: #1D2731;
+    background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/YqGSkmb/elegant-fantasy-abstract-technology-science-and-engineering-motion-background-with-golden-particles-in-organic-motion-flickering-light-depth-of-field-settings-3d-rendering_s-qpffa_g_thumbnail-full09.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    z-index: 0;
+}
+
+#home:after {
+    content: " ";
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background: transparent linear-gradient(to right bottom, #b62323, #795548); */
+    z-index: -1;
+    opacity: .6;
+}
+
+#home svg {
+    position: absolute;
+    bottom: 0
+}
+
+.front-end {
+    color: #D9B310;
+    background: #1D2731;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+/* About */
+
+#about {
+    margin-top: 6rem;
+}
+
+.full-width {
+    width: inherit;
+    margin-left: 0
+}
+
+.profile-photo {
+    text-align: right;
+}
+
+.profile-photo img {
+    border: 0.7rem solid #1D2731;
+    padding: 0.9rem;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background-color: #1D2731;
+}
+
+.description {
+    font-size: 1.5rem;
+    font-family: 'Muli', sans-serif;
+    line-height: 3rem;
+    font-weight: 300;
+    letter-spacing: 0px;
+    color: wheat;
+}
+
+.linkLab {
+    color: #D9B310;
+}
+
+.skills {
+    text-align: center;
+    background-color: white;
+    color: #D9B310;
+    padding: 3rem;
+}
+
+.skills i {
+    font-size: 3rem;
+    color: #D9B310;
+    line-height: 2;
+    margin: 2.5rem;
+}
+
+
+/* Portafolio */
+
+.project i {
+    color: #D9B310;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.content {
+    position: relative;
+    color: #1D2731;
+    margin-top: 3rem;
+}
+
+.content img {
+    border: .5rem solid #1D2731;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 2rem;
+    padding-top: 3rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: white;
+}
+
+.content:hover .overlay {
+    opacity: 1;
+}
+
+.content i {
+    color: #D9B310;
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.content-title {
+    margin-top: 1rem;
+    color: #D9B310;
+}
+
+.btn {
+    background-color: #D9B310;
+    color: #1D2731;
+}
+
+.content-description {
+    color: wheat;
+}
+
+
+/* Contact */
+
+#contact {
+    font-family: 'Adamina', serif;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+    background-color: #1D2731;
+    color: #D9B310;
+    padding-bottom: 1rem;
+}
+
+#contact i {
+    font-size: 3rem;
+    line-height: 2;
+    margin: 1rem;
+}
+
+#contact a {
+    color: #D9B310;
+}
+
+
+/* colors */
+
+.color-one {
+    color: #D9B310;
+}
+
+.background-one {
+    background-color: #1D2731;
+}
+
+
+/* fonts */
+
+.font-one {
+    font-family: 'Adamina', serif;
+}
+
+.font-two {
+    font-family: 'Muli', sans-serif;
+}
+
+
+/* Titles */
+
+h1 {
+    font-family: 'Adamina', serif;
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.sub-title {
+    font-size: 2rem;
+    font-family: 'Adamina', serif;
+    font-weight: bold;
+}
+
+canvas {
+    display: block;
+    vertical-align: bottom;
+}
+
+.top-20 {
+    top: 30%
+}
+
+
+/* others */
+
+.separator {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 700px) {
+    .sub-title {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.5rem;
+    }
+    .user {
+        width: 60%;
+    }
+    .skills {
+        padding: 1rem;
+    }
+    .skills i {
+        margin: 1.5rem;
+    }
+    .email {
+        font-size: 1rem;
+    }
+}
+
+@media(max-width: 980px) {
+    nav {
+        background-color: white !important;
+    }
+    .navbar-collapse {
+        text-align: center;
+        background-color: white !important;
+    }
+}
