@@ -107,6 +107,10 @@ nav i {
     padding: .5rem 1.5rem;
 }
 
+.icon {
+    color: #D9B310;
+}
+
 .navbar-toggler {
     padding: .25rem .75rem;
     font-size: 1.25rem;
@@ -137,18 +141,17 @@ nav i {
     z-index: 0;
 }
 
-#home:after {
-    content: " ";
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
-    position: absolute;
+
+/* #home:after {
+    content: "";
+    opacity: 0.5;
     top: 0;
-    bottom: 0;
     left: 0;
+    bottom: 0;
     right: 0;
-    /* background: transparent linear-gradient(to right bottom, #b62323, #795548); */
+    position: absolute;
     z-index: -1;
-    opacity: .6;
-}
+} */
 
 #home svg {
     position: absolute;
@@ -167,6 +170,8 @@ nav i {
 
 #about {
     margin-top: 6rem;
+    margin-bottom: 6rem;
+    /* min-height: 100vh; */
 }
 
 .full-width {
@@ -198,6 +203,9 @@ nav i {
 .linkLab {
     color: #D9B310;
 }
+
+
+/*Skills*/
 
 .skills {
     text-align: center;
@@ -325,7 +333,7 @@ h1 {
     font-weight: bold;
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: black;
+    color: #D9B310;
 }
 
 .sub-title {
@@ -360,7 +368,7 @@ canvas {
         width: 60%;
     }
     .skills {
-        padding: 1rem;
+        padding: 3rem;
     }
     .skills i {
         margin: 1.5rem;
